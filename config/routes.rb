@@ -6,4 +6,6 @@ Mailtodo::Application.routes.draw do
     resources :todos, :only => :index
   end
   
+  match '/users/:email/todos' => "todos#index", :email => /.*/
+  
 end
