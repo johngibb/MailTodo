@@ -16,7 +16,7 @@ class CreateTodoLists < ActiveRecord::Migration
       Todo.reset_column_information
           
       User.find_each do |user|
-        l = TodoList.create! :title => 'Main', :user_id => user
+        l = TodoList.create! :title => 'Main', :user_id => user.id
         Todo.where(:user_id => user).update_all(:todo_list_id => l)
       end
       
