@@ -10,17 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110321210257) do
+ActiveRecord::Schema.define(:version => 20110322025351) do
 
-  create_table "todos", :force => true do |t|
-    t.integer  "user_id"
+  create_table "todo_lists", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "todos", ["user_id"], :name => "index_todos_on_user_id"
+  add_index "todo_lists", ["user_id"], :name => "index_todo_lists_on_user_id"
+
+  create_table "todos", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "todo_list_id"
+  end
+
+  add_index "todos", ["todo_list_id"], :name => "index_todos_on_todo_list_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

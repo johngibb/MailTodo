@@ -1,0 +1,17 @@
+<h2><%= @user.email %></h2>
+
+<% if @todo_lists.present? %>
+	<% @todo_lists.each do |list| %>
+		<h3><%= list.title %></h3>
+		<ul>
+			<% list.todos.each do |todo| %>
+			<li>
+				<b><%= todo.title %></b><br />
+				<%= todo.description %>
+			</li>
+			<% end %>
+		</ul>
+	<% end %>
+<% else %>
+	This user has no todos.
+<% end %>

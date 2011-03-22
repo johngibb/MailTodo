@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :todos
+  has_many :todo_lists
   
   validates_presence_of :email
   validates_uniqueness_of :email

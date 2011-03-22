@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TodosControllerTest < ActionController::TestCase
+class TodoListsControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "Listing Todos" do
     user = users(:one)
@@ -8,6 +8,6 @@ class TodosControllerTest < ActionController::TestCase
     
     assert_response :success
     assert_not_nil assigns(:user)
-    assert_not_nil assigns(:todos)
+    assert_not_nil assigns(:todo_lists)
   end
 end

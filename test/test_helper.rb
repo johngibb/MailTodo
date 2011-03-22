@@ -10,9 +10,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def email_from_todo(user, todo)
+  def build_email(user, list, todo)
     {
       :from    => user.email,
+      :to      => list.title,
       :subject => todo.title,
       :text    => todo.description
     }

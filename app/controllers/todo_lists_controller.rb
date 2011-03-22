@@ -1,8 +1,8 @@
-class TodosController < ApplicationController
+class TodoListsController < ApplicationController
   before_filter :find_user
   
   def index
-    @todos = @user.todos
+    @todo_lists = @user.todo_lists
   end
   
   private

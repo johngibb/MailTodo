@@ -6,6 +6,6 @@ class TodoNotifier < ActionMailer::Base
     from       "MailTodo"
     subject    "#{email} todo list added."
     sent_on    Time.now
-    body       :email => email
+    @email = email
   end
 end
