@@ -17,7 +17,7 @@ class ListenerController < ApplicationController
     
     l.save!
     
-    TodoNotifier.success(user.email).deliver
+    TodoNotifier.success(user.email, title).deliver
     
     render :inline => 'hello, world!'
   end

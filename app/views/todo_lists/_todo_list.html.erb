@@ -1,0 +1,11 @@
+<div>
+	<h3><%= todo_list.title %></h3>
+	<ul>
+		<% todo_list.todos.each do |todo| %>
+		<li>
+			<b><%= todo.title %></b><br />
+			<%= todo.description %>
+		</li>
+		<% end %>
+	</ul>
+</div>
