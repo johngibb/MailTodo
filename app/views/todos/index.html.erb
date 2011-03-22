@@ -1,3 +1,14 @@
-<% params.each do |k, v| %>
-	<%= k %>: <%= v %><br />
+<h2><%= @user.email %></h2>
+
+<h3>Todos</h3>
+<% if @todos.present? %>
+	<ul>
+		<% @todos.each do |todo| %>
+		<li>
+			<%= todo.title %>
+		</li>
+		<% end %>
+	</ul>
+<% else %>
+	This user has no todos.
 <% end %>
