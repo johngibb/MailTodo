@@ -6,9 +6,9 @@ class CreateTodos < ActiveRecord::Migration
       t.string :description
 
       t.timestamps
-      
-      t.index :user_id
     end
+    
+    add_index :todos, :user_id
   end
 
   def self.down
