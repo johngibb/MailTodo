@@ -5,7 +5,8 @@
 	<ul>
 		<% @todos.each do |todo| %>
 		<li>
-			<%= todo.title %>
+			<b><%= todo.title %></b><br />
+			<%= todo.description %>
 		</li>
 		<% end %>
 	</ul>
