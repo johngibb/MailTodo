@@ -14,7 +14,7 @@ class ActiveSupport::TestCase
     {
       :from    => user.email,
       :subject => todo.title,
-      :html    => todo.description
+      :text    => todo.description
     }
   end
 end

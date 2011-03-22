@@ -8,7 +8,7 @@ class ListenerController < ApplicationController
     Todo.create!(
       :user => user,
       :title => params[:subject],
-      :description => params[:html]
+      :description => params[:text]
     )
     
     render :inline => 'hello, world!'
